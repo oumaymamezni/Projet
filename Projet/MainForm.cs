@@ -21,5 +21,10 @@ namespace Projet
         {
 
         }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
