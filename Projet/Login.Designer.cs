@@ -35,11 +35,13 @@
             this.txtPwd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.materialLabel2);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtPwd);
@@ -134,6 +136,19 @@
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Login User";
             // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(148, 74);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(81, 19);
+            this.materialLabel2.TabIndex = 5;
+            this.materialLabel2.Text = "Login User";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,5 +174,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtLogin;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialFlatButton btnClear;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }
