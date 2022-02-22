@@ -22,5 +22,17 @@ namespace Projet
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm main = new MainForm();
+            main.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtPwd = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnLogin = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnClear = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnLogin = new MaterialSkin.Controls.MaterialFlatButton();
+            this.txtPwd = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,68 +50,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 450);
             this.panel1.TabIndex = 0;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(47, 74);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(161, 36);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Login User";
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Depth = 0;
-            this.txtLogin.Hint = "";
-            this.txtLogin.Location = new System.Drawing.Point(27, 143);
-            this.txtLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.PasswordChar = '\0';
-            this.txtLogin.SelectedText = "";
-            this.txtLogin.SelectionLength = 0;
-            this.txtLogin.SelectionStart = 0;
-            this.txtLogin.Size = new System.Drawing.Size(202, 23);
-            this.txtLogin.TabIndex = 1;
-            this.txtLogin.UseSystemPasswordChar = false;
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Depth = 0;
-            this.txtPwd.Hint = "";
-            this.txtPwd.Location = new System.Drawing.Point(27, 205);
-            this.txtPwd.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.PasswordChar = '\0';
-            this.txtPwd.SelectedText = "";
-            this.txtPwd.SelectionLength = 0;
-            this.txtPwd.SelectionStart = 0;
-            this.txtPwd.Size = new System.Drawing.Size(202, 23);
-            this.txtPwd.TabIndex = 2;
-            this.txtPwd.UseSystemPasswordChar = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.AutoSize = true;
-            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Depth = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogin.Location = new System.Drawing.Point(53, 265);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Primary = false;
-            this.btnLogin.Size = new System.Drawing.Size(52, 36);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnClear
             // 
@@ -131,6 +70,69 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.AutoSize = true;
+            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogin.Depth = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLogin.Location = new System.Drawing.Point(53, 265);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Primary = false;
+            this.btnLogin.Size = new System.Drawing.Size(52, 36);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtPwd
+            // 
+            this.txtPwd.Depth = 0;
+            this.txtPwd.Hint = "";
+            this.txtPwd.Location = new System.Drawing.Point(27, 205);
+            this.txtPwd.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '\0';
+            this.txtPwd.SelectedText = "";
+            this.txtPwd.SelectionLength = 0;
+            this.txtPwd.SelectionStart = 0;
+            this.txtPwd.Size = new System.Drawing.Size(202, 23);
+            this.txtPwd.TabIndex = 2;
+            this.txtPwd.UseSystemPasswordChar = false;
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Depth = 0;
+            this.txtLogin.Hint = "";
+            this.txtLogin.Location = new System.Drawing.Point(27, 143);
+            this.txtLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.PasswordChar = '\0';
+            this.txtLogin.SelectedText = "";
+            this.txtLogin.SelectionLength = 0;
+            this.txtLogin.SelectionStart = 0;
+            this.txtLogin.Size = new System.Drawing.Size(202, 23);
+            this.txtLogin.TabIndex = 1;
+            this.txtLogin.UseSystemPasswordChar = false;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(47, 74);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(81, 19);
+            this.materialLabel1.TabIndex = 0;
+            this.materialLabel1.Text = "Login User";
             // 
             // Login
             // 
