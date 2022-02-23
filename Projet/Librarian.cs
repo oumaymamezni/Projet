@@ -35,7 +35,13 @@ namespace Projet
         {
 
         }
-
+        private void populate()
+        {
+            con.Open();
+            string query = "select * from LibrarianTbl";
+            s
+            con.Close();
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if(txtId.Text=="" || txtName.Text =="" || txtPassword.Text =="" || txtPhone.Text =="")
