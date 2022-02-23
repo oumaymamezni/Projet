@@ -35,14 +35,17 @@ namespace Projet
         {
 
         }
-       /* private void populate()
+       private void populate()
         {
             con.Open();
             string query = "select * from LibrarianTbl";
             SqlDataAdapter da = new SqlDataAdapter();
-
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dgvLibrarians.DataSource = ds.Tables[0];
             con.Close();
-        } */
+        } 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if(txtId.Text=="" || txtName.Text =="" || txtPassword.Text =="" || txtPhone.Text =="")
@@ -56,6 +59,19 @@ namespace Projet
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Librarian added successfully");
                 con.Close();
+                populate();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Entre the librarian Id");
+            }
+            else
+            {
+
             }
         }
     }
