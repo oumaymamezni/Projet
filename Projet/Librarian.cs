@@ -35,13 +35,14 @@ namespace Projet
         {
 
         }
-        private void populate()
+       /* private void populate()
         {
             con.Open();
             string query = "select * from LibrarianTbl";
-            s
+            SqlDataAdapter da = new SqlDataAdapter();
+
             con.Close();
-        }
+        } */
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if(txtId.Text=="" || txtName.Text =="" || txtPassword.Text =="" || txtPhone.Text =="")
