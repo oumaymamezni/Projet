@@ -13,7 +13,7 @@ namespace Projet
 {
     public partial class Librarian : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-H8N9P9A\SQLEXPRESS;Initial Catalog=Library;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Library;Integrated Security=True; ");
         public Librarian()
         {
             InitializeComponent();

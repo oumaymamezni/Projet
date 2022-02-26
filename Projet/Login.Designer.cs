@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.btnClear = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnLogin = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtPwd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,19 @@
             this.panel1.Size = new System.Drawing.Size(252, 450);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(148, 74);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(81, 19);
+            this.materialLabel2.TabIndex = 5;
+            this.materialLabel2.Text = "Login User";
             // 
             // btnClear
             // 
@@ -122,6 +135,7 @@
             this.txtLogin.Size = new System.Drawing.Size(202, 23);
             this.txtLogin.TabIndex = 1;
             this.txtLogin.UseSystemPasswordChar = false;
+            this.txtLogin.Click += new System.EventHandler(this.txtLogin_Click);
             // 
             // materialLabel1
             // 
@@ -135,19 +149,6 @@
             this.materialLabel1.Size = new System.Drawing.Size(81, 19);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Login User";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(148, 74);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(81, 19);
-            this.materialLabel2.TabIndex = 5;
-            this.materialLabel2.Text = "Login User";
             // 
             // Login
             // 

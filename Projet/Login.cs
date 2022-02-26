@@ -34,5 +34,10 @@ namespace Projet
         {
 
         }
+
+        private void txtLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
