@@ -85,6 +85,11 @@
     <Compile Include="Librarian.Designer.cs">
       <DependentUpon>Librarian.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibraryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +155,17 @@
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LibraryDataSet.xsc">
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LibraryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LibraryDataSet.xss">
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

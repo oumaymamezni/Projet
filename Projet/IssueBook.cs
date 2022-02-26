@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,89 @@ namespace Projet
             MainForm m = new MainForm();
             m.Show();
             this.Hide();
+        }
+        SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Library;Integrated Security=True; ");
+        private void FillStudent()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select StdId from StudentTbl", con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("StdId", typeof(int));
+            dt.Load(rdr);
+            cbStudent.ValueMember = "StdId";
+            cbStudent.DataSource = dt;
+            con.Close();
+        }
+        private void FillBook()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select BookName from BookTbl", con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("BookName", typeof(string));
+            dt.Load(rdr);
+            cbBook.ValueMember = "BookName";
+            cbBook.DataSource = dt;
+            con.Close();
+        }
+        private void fetchstddata()
+        {
+            con.Open();
+            string query = "select * from StudentTbl where StdId=" + cbStudent.SelectedValue.ToString() + "";
+            SqlCommand cmd = new SqlCommand(query, con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach(DataRow dr in dt.Rows)
+            {
+                txtName.Text = dr["StdName"].ToString();
+                txtDepartement.Text = dr["StdDep"].ToString();
+                txtPhone.Text = dr["StdPhone"].ToString();
+
+            }
+            con.Close();
+        }
+        private void IssueBook_Load(object sender, EventArgs e)
+        {
+            FillStudent();
+            FillBook();
+            populate();
+        }
+        private void populate()
+        {
+            con.Open();
+            string query = "select * from IssueTbl";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dgvIssue.DataSource = ds.Tables[0];
+            con.Close();
+        }
+        private void btnIss_Click(object sender, EventArgs e)
+        {
+            if (txtNum.Text == "" || txtName.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                string Date = date.Value.Day.ToString() + "/" + date.Value.Month.ToString() + "/" + date.Value.Year.ToString(); 
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into IssueTbl values(" + txtNum.Text + ",'" + cbStudent.SelectedValue.ToString() + "','" + txtName.Text + "','" + txtDepartement.Text + "','" + txtPhone.Text + "','" + cbBook.SelectedValue.ToString() + "','" + Date + "')", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Book successfully Issued");
+                con.Close();
+                populate();
+            }
+        }
+
+        private void cbStudent_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            fetchstddata();
         }
     }
 }

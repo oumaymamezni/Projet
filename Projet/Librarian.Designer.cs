@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,8 +47,13 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.libraryDataSet = new Projet.LibraryDataSet();
+            this.librarianTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.librarianTblTableAdapter = new Projet.LibraryDataSetTableAdapters.LibrarianTblTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarians)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librarianTblBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPhone
@@ -92,6 +98,7 @@
             // 
             // dgvLibrarians
             // 
+            this.dgvLibrarians.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvLibrarians.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLibrarians.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -145,6 +152,7 @@
             this.dgvLibrarians.ThemeStyle.RowsStyle.Height = 22;
             this.dgvLibrarians.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvLibrarians.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvLibrarians.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibrarians_CellContentClick);
             // 
             // btnDelete
             // 
@@ -168,6 +176,7 @@
             this.btnEdit.TabIndex = 45;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -251,6 +260,7 @@
             this.txtId.Size = new System.Drawing.Size(187, 23);
             this.txtId.TabIndex = 37;
             this.txtId.UseSystemPasswordChar = false;
+            this.txtId.Click += new System.EventHandler(this.txtId_Click);
             // 
             // materialLabel1
             // 
@@ -287,6 +297,20 @@
             this.label1.Text = "Library Management System Librarians";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // libraryDataSet
+            // 
+            this.libraryDataSet.DataSetName = "LibraryDataSet";
+            this.libraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // librarianTblBindingSource
+            // 
+            this.librarianTblBindingSource.DataMember = "LibrarianTbl";
+            this.librarianTblBindingSource.DataSource = this.libraryDataSet;
+            // 
+            // librarianTblTableAdapter
+            // 
+            this.librarianTblTableAdapter.ClearBeforeFill = true;
+            // 
             // Librarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +337,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarians)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librarianTblBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +361,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private LibraryDataSet libraryDataSet;
+        private System.Windows.Forms.BindingSource librarianTblBindingSource;
+        private LibraryDataSetTableAdapters.LibrarianTblTableAdapter librarianTblTableAdapter;
     }
 }

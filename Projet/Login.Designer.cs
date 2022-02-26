@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.btnClear = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnLogin = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtPwd = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -41,7 +40,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.materialLabel2);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtPwd);
@@ -52,20 +50,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 450);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(148, 74);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(81, 19);
-            this.materialLabel2.TabIndex = 5;
-            this.materialLabel2.Text = "Login User";
             // 
             // btnClear
             // 
@@ -85,6 +69,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnLogin
             // 
@@ -135,7 +120,6 @@
             this.txtLogin.Size = new System.Drawing.Size(202, 23);
             this.txtLogin.TabIndex = 1;
             this.txtLogin.UseSystemPasswordChar = false;
-            this.txtLogin.Click += new System.EventHandler(this.txtLogin_Click);
             // 
             // materialLabel1
             // 
@@ -160,7 +144,6 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -175,6 +158,5 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtLogin;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialFlatButton btnClear;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }

@@ -34,10 +34,9 @@
             this.txtDepartement = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.btnHome = new System.Windows.Forms.Button();
-            this.dgvIssue = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnIss = new System.Windows.Forms.Button();
             this.txtName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -52,8 +51,9 @@
             this.cbStudent = new System.Windows.Forms.ComboBox();
             this.cbBook = new System.Windows.Forms.ComboBox();
             this.date = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIssue)).BeginInit();
+            this.dgvIssue = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssue)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDepartement
@@ -88,7 +88,7 @@
             // 
             this.btnHome.BackColor = System.Drawing.Color.BurlyWood;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(120, 426);
+            this.btnHome.Location = new System.Drawing.Point(153, 417);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(115, 23);
             this.btnHome.TabIndex = 62;
@@ -96,67 +96,11 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // dgvIssue
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvIssue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvIssue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvIssue.BackgroundColor = System.Drawing.Color.White;
-            this.dgvIssue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvIssue.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvIssue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIssue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvIssue.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIssue.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvIssue.EnableHeadersVisualStyles = false;
-            this.dgvIssue.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvIssue.Location = new System.Drawing.Point(390, 160);
-            this.dgvIssue.Name = "dgvIssue";
-            this.dgvIssue.RowHeadersVisible = false;
-            this.dgvIssue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIssue.Size = new System.Drawing.Size(373, 268);
-            this.dgvIssue.TabIndex = 61;
-            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvIssue.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvIssue.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvIssue.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvIssue.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvIssue.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgvIssue.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvIssue.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvIssue.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvIssue.ThemeStyle.ReadOnly = false;
-            this.dgvIssue.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvIssue.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvIssue.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgvIssue.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvIssue.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvIssue.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvIssue.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.BurlyWood;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(250, 389);
+            this.btnDelete.Location = new System.Drawing.Point(602, 394);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 60;
@@ -167,23 +111,24 @@
             // 
             this.btnEdit.BackColor = System.Drawing.Color.BurlyWood;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(142, 389);
+            this.btnEdit.Location = new System.Drawing.Point(443, 394);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 59;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // btnAdd
+            // btnIss
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.BurlyWood;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(39, 389);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 58;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnIss.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnIss.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIss.Location = new System.Drawing.Point(136, 385);
+            this.btnIss.Name = "btnIss";
+            this.btnIss.Size = new System.Drawing.Size(147, 23);
+            this.btnIss.TabIndex = 58;
+            this.btnIss.Text = "Issue Book";
+            this.btnIss.UseVisualStyleBackColor = false;
+            this.btnIss.Click += new System.EventHandler(this.btnIss_Click);
             // 
             // txtName
             // 
@@ -336,6 +281,7 @@
             this.cbStudent.Name = "cbStudent";
             this.cbStudent.Size = new System.Drawing.Size(187, 21);
             this.cbStudent.TabIndex = 71;
+            this.cbStudent.SelectionChangeCommitted += new System.EventHandler(this.cbStudent_SelectionChangeCommitted);
             // 
             // cbBook
             // 
@@ -352,11 +298,69 @@
             this.date.Size = new System.Drawing.Size(187, 20);
             this.date.TabIndex = 73;
             // 
+            // dgvIssue
+            // 
+            this.dgvIssue.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvIssue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvIssue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvIssue.BackgroundColor = System.Drawing.Color.White;
+            this.dgvIssue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvIssue.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvIssue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIssue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvIssue.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIssue.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvIssue.EnableHeadersVisualStyles = false;
+            this.dgvIssue.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvIssue.Location = new System.Drawing.Point(344, 113);
+            this.dgvIssue.Name = "dgvIssue";
+            this.dgvIssue.RowHeadersVisible = false;
+            this.dgvIssue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvIssue.Size = new System.Drawing.Size(436, 268);
+            this.dgvIssue.TabIndex = 74;
+            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvIssue.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvIssue.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvIssue.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvIssue.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvIssue.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvIssue.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvIssue.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvIssue.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvIssue.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvIssue.ThemeStyle.ReadOnly = false;
+            this.dgvIssue.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvIssue.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvIssue.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvIssue.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvIssue.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvIssue.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvIssue.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // IssueBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvIssue);
             this.Controls.Add(this.date);
             this.Controls.Add(this.cbBook);
             this.Controls.Add(this.cbStudent);
@@ -367,10 +371,9 @@
             this.Controls.Add(this.txtDepartement);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.dgvIssue);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnIss);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
@@ -379,10 +382,12 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IssueBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IssueBook";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIssue)).EndInit();
+            this.Load += new System.EventHandler(this.IssueBook_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,10 +398,9 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtDepartement;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private System.Windows.Forms.Button btnHome;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvIssue;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnIss;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtName;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
@@ -411,5 +415,6 @@
         private System.Windows.Forms.ComboBox cbStudent;
         private System.Windows.Forms.ComboBox cbBook;
         private System.Windows.Forms.DateTimePicker date;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvIssue;
     }
 }
