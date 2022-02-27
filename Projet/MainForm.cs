@@ -66,5 +66,18 @@ namespace Projet
         {
 
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            AboutUs about = new AboutUs();
+            about.Show();
+            //this.Hide();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard DS = new Dashboard();
+            DS.Show();
+        }
     }
 }

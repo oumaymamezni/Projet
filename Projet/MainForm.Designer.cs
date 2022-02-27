@@ -220,6 +220,7 @@
             this.btnDashboard.TabIndex = 6;
             this.btnDashboard.Text = "dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnAbout
             // 
@@ -236,6 +237,7 @@
             this.btnAbout.TabIndex = 5;
             this.btnAbout.Text = "about us";
             this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // MainForm
             // 
