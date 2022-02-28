@@ -204,6 +204,7 @@
             this.btnTips.TabIndex = 7;
             this.btnTips.Text = "tips";
             this.btnTips.UseVisualStyleBackColor = true;
+            this.btnTips.Click += new System.EventHandler(this.btnTips_Click);
             // 
             // btnDashboard
             // 

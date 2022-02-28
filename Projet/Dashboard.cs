@@ -34,20 +34,20 @@ namespace Projet
             Booklbl.Text = dt.Rows[0][0].ToString();
             SqlDataAdapter sda2 = new SqlDataAdapter("select count(*) from StudentTbl", con);
             DataTable dt2 = new DataTable();
-            sda1.Fill(dt2);
-            Stdlbl.Text = dt.Rows[0][0].ToString();
+            sda2.Fill(dt2);
+            Stdlbl.Text = dt2.Rows[0][0].ToString();
             SqlDataAdapter sda3 = new SqlDataAdapter("select count(*) from LibrarianTbl", con);
             DataTable dt3 = new DataTable();
-            sda1.Fill(dt3);
-            Liblbl.Text = dt.Rows[0][0].ToString();
+            sda3.Fill(dt3);
+            Liblbl.Text = dt3.Rows[0][0].ToString();
             SqlDataAdapter sda4 = new SqlDataAdapter("select count(*) from ReturnTbl", con);
             DataTable dt4 = new DataTable();
-            sda1.Fill(dt4);
-            Retlbl.Text = dt.Rows[0][0].ToString();
+            sda4.Fill(dt4);
+            Retlbl.Text = dt4.Rows[0][0].ToString();
             SqlDataAdapter sda5 = new SqlDataAdapter("select count(*) from IssueTbl", con);
             DataTable dt5 = new DataTable();
-            sda1.Fill(dt5);
-            Isslbl.Text = dt.Rows[0][0].ToString();
+            sda5.Fill(dt5);
+            Isslbl.Text = dt5.Rows[0][0].ToString();
 
             con.Close();
         }

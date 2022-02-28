@@ -79,5 +79,11 @@ namespace Projet
             Dashboard DS = new Dashboard();
             DS.Show();
         }
+
+        private void btnTips_Click(object sender, EventArgs e)
+        {
+            Tips tips = new Tips();
+            tips.Show();
+        }
     }
 }

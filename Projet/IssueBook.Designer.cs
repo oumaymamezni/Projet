@@ -298,6 +298,7 @@
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(187, 20);
             this.date.TabIndex = 73;
+            this.date.ValueChanged += new System.EventHandler(this.date_ValueChanged);
             // 
             // dgvIssue
             // 

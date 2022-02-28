@@ -76,6 +76,7 @@ namespace Projet
             txtDepartment.Text = dgvBookIssue.SelectedRows[0].Cells[3].Value.ToString();
             txtPhone.Text = dgvBookIssue.SelectedRows[0].Cells[4].Value.ToString();
             cbBook.Text = dgvBookIssue.SelectedRows[0].Cells[5].Value.ToString();
+            dateIssue.Text = DateTime.Parse(dgvBookIssue.SelectedRows[0].Cells[6].Value.ToString()).ToShortDateString();
         }
 
         private void updateBook()
@@ -117,6 +118,30 @@ namespace Projet
                 populate();
                 populateReturn();
             }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            //e.Graphics.DrawImage();
+        }
+        Bitmap bitmap;
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            Panel panel = new Panel();
+            this.Controls.Add(panel);
+            Graphics graphics = panel.CreateGraphics();
+            Size size = this.ClientSize;
+            bitmap = new Bitmap(size.Width, size.Height, graphics);
+            graphics = Graphics.FromImage(bitmap);
+            Point point = PointToScreen(panel.Location);
+            graphics.CopyFromScreen(point.X, point.Y, 0, 0, size);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void dateIssue_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

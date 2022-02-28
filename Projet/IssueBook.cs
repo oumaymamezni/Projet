@@ -185,6 +185,12 @@ namespace Projet
             txtDepartement.Text = dgvIssue.SelectedRows[0].Cells[3].Value.ToString();
             txtPhone.Text = dgvIssue.SelectedRows[0].Cells[4].Value.ToString();
             cbBook.Text = dgvIssue.SelectedRows[0].Cells[5].Value.ToString();
+            date.Text = DateTime.Parse(dgvIssue.SelectedRows[0].Cells[6].Value.ToString()).ToShortDateString();
+        }
+
+        private void date_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
